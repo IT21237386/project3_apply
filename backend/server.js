@@ -44,7 +44,8 @@ app.post("/send-email", upload.single("resume"), (req, res) => {
   
     const mailOptions = {
       from: "kavindasithum127@gmail.com", // Sender email
-      to: "kwpchamikara99@gmail.com", // Recipient email
+      to: "sdulshan10@gmail.com", // Recipient email
+    //   to: req.body.email,
       subject: "New Job Application",
       html: `
         <h1>New Job Application</h1>

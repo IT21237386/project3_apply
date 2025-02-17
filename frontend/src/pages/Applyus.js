@@ -61,7 +61,7 @@ function ApplyPage() {
 
   return (
     <div className="apply-page">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="apply-container">
         {/* Left Side - Form */}
         <div className="apply-form-section">
