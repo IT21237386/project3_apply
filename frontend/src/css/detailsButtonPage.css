@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Skeokchher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    /* Removes any default margin */
+}
+
+/* Apply gradient background to body */
+body {
+    background: linear-gradient(to bottom, #ffffff, #DEF2FF);
+    background-attachment: fixed;
+    /* Prevents background from scrolling */
+    background-repeat: no-repeat;
+    /* Ensure the gradient does not repeat */
+    background-size: cover;
+    /* Ensures full coverage of the background */
+}
+
+/* Make sure content inside doesn't overflow */
+.karw-details-button-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Content Pushing Footer */
+.karw-details-button-main-content {
+    flex-grow: 1;
+    padding-bottom: 100px;
+}
+
+/* Hero Section */
+.karw-details-button-image-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    /* Full viewport width */
+    max-width: 100vw;
+    height: auto;
+    /* Height will adjust based on the image */
+    border-radius: 0px 0px 50px 50px;
+    margin-bottom: 300px;
+}
+
+.karw-banner-image {
+    width: 100%;
+    /* Make sure the image takes up the full width */
+    max-width: 100vw;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    /* Maintain the aspect ratio of the image */
+    object-fit: cover;
+    /* Ensures image fills the container without being stretched */
+    border-radius: inherit;
+}
+
+.karw-small-image-wrapper {
+    position: absolute;
+    top: 75%;
+    /* Adjust the overlap */
+    left: 22%;
+    transform: translateX(-50%);
+    /* Center the small image horizontally */
+    z-index: 1;
+}
+
+.karw-small-image {
+    width: 25vw;
+    /* Set width relative to the viewport width */
+    max-width: 500px;
+    /* Set a maximum width to prevent the image from growing too large */
+    height: auto;
+    /* Maintain aspect ratio */
+    border: 2px solid white;
+    /* Adds a border around the small image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adds a subtle shadow */
+}
+
+/* Job Listing Section */
+.karw-detail-section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    border-bottom: none;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #fff;
+    margin: 0px 20px 0 20px;
+}
+
+/* Two-column Layout for Job Title/Text and Image */
+.karw-job-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.karw-job-description h1 {
+    margin-top: 0px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.karw-detail-section h2 {
+    margin-top: 70px;
+}
+
+.karw-job-description h1,
+.karw-detail-section h2 {
+    font-family: 'Konkhmer Skeokchher', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.karw-job-description p,
+.karw-detail-section p {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    /* Medium weight */
+    font-size: 24px;
+}
+
+.karw-job-image {
+    height: 432px;
+    width: auto;
+    object-fit: cover;
+    align-self: flex-end;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+
+.karw-job-image img {
+    border-radius: 10px;
+}
+
+/* Icon Section */
+.karw-icon-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 items per row by default */
+    gap: 20px;
+    /* Adds space between items */
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.karw-icon-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.karw-icon-image {
+    margin-right: 10px;
+    /* Space between image and text */
+    margin-bottom: 20px;
+}
+
+.karw-icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.karw-icon-item .karw-icon-text .karw-sub-text {
+    font-family: 'Konkhmer Skeokchher', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+.karw-icon-item .karw-icon-text .karw-main-text {
+    font-family: 'Konkhmer Skeokchher', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.karw-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.karw-vertical-line {
+    width: 1px;
+    /* Increase the thickness of the vertical line */
+    height: 90px;
+    /* Increase the height of the vertical line */
+    background-color: #030303;
+    /* Keep the same color or change it as needed */
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+
+
+/* Skills Section */
+.karw-skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.karw-skill-item {
+    font-family: 'Inter', sans-serif;
+    /* Apply Inter font */
+    font-weight: bold;
+    /* Bold weight */
+    font-size: 36px;
+    /* Font size 36px */
+    text-align: center;
+    padding: 0px 10px;
+    border: 4px solid black;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+/* Apply Now Button */
+.karw-apply-button-container {
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.karw-apply-button {
+    font-family: 'Inter', sans-serif;
+    /* Apply Inter font */
+    font-weight: bold;
+    /* Bold weight */
+    font-size: 36px;
+    /* Font size 36px */
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0px 0px 50px 50px;
+    border: none;
+    text-align: center;
+}
+
+/* Recommended Jobs Section */
+.karw-recommended-job-section {
+    padding: 20px;
+    margin: 30px 20px;
+}
+
+.karw-recommended-job-section h2 {
+    font-family: 'Inter', sans-serif;
+    /* Apply Inter font */
+    font-weight: bold;
+    /* Apply bold weight */
+    font-size: 40px;
+    /* Font size 40px */
+    margin-bottom: 15px;
+}
+
+.karw-job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 373px);
+    gap: 80px;
+    justify-content: center;
+}
+
+.karw-job-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 373px;
+    height: 391px;
+}
+
+.karw-job-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 270px !important;
+}
+
+
+.karw-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 70px;
+    background: url('../assets/bookmark-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+.karw-job-title {
+    font-family: 'Konkhmer Sleokchher', sans-serif;
+    /* Apply Konkhmer Sleokchher font */
+    font-weight: bold;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.karw-job-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.karw-job-card-footer .karw-job-card-image {
+    height: 60px;
+    /* Set desired height */
+    width: auto;
+    /* Set desired width */
+    border-radius: 0px;
+    padding-left: 18px;
+    /* Adds space to the left of the image */
+    padding-right: 18px;
+    /* Adds space to the right of the image */
+}
+
+.karw-company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align text properly to the left */
+    margin-left: 10px;
+    /* Adds space between image and text */
+    flex-grow: 1;
+    /* Ensures text does not overlap */
+}
+
+.karw-company-name {
+    font-family: 'Konkhmer Sleokchher', sans-serif;
+    /* Apply Konkhmer Sleokchher font */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.karw-company-type {
+    font-family: 'Konkhmer Sleokchher', sans-serif;
+    /* Apply Konkhmer Sleokchher font */
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.karw-details-button {
+    background: black;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Go Up Button */
+.karw-go-up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.karw-go-up-button:hover {
+    background-color: #333;
+}
+
+.karw-go-up-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer */
+.karw-footer {
+    width: 100%;
+    background: #000;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .karw-details-button-image-section {
+        margin-bottom: 100px;
+    }
+
+    .karw-job-layout {
+        flex-direction: column;
+    }
+
+    .karw-job-image {
+        display: none;
+        /* Hide the image on mobile */
+    }
+
+    .karw-job-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* Grid layout for job cards */
+        gap: 20px;
+        justify-items: center;
+        /* Center items horizontally */
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    .karw-icon-section {
+        grid-template-columns: repeat(1, 1fr);
+        /* 2 items per row on mobile */
+    }
+
+    .karw-icon-item {
+        margin-bottom: 10px;
+        /* Reduce margin for mobile */
+    }
+
+    .karw-vertical-line {
+        display: none;
+    }
+
+    /* Scale down the job card and job title section by 20% */
+    .karw-job-card {
+        transform: scale(0.8);
+        /* Reduce by 20% */
+    }
+
+    /* Scale down the font size and other elements */
+    .karw-job-description h1,
+    .karw-detail-section h2 {
+        font-size: 48px;
+        /* Reduce font size by 20% */
+    }
+
+    .karw-job-description p,
+    .karw-detail-section p {
+        font-size: 19.2px;
+        /* Reduce font size by 20% */
+    }
+
+    .karw-skills-section {
+        gap: 10px;
+        /* Reduce gap between skill items */
+    }
+
+    .karw-skill-item {
+        font-size: 20px;
+        /* Reduce font size of skill items */
+    }
+
+    .karw-apply-button {
+        font-size: 28.8px;
+        /* Reduce font size of apply button */
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    .karw-recommended-job-section h2 {
+        font-size: 32px;
+        /* Reduce recommended job section header font size */
+    }
+
+    /* Scaling down the icon size */
+    .karw-icon {
+        font-size: 19.2px;
+        /* Reduce icon size by 20% */
+    }
+
+    .karw-job-card-header {
+        height: 216px;
+        /* Reduce job card header height */
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    .karw-job-card-footer {
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    /* Reduce size of job card image */
+    .karw-job-card-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .karw-go-up-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .karw-go-up-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .karw-banner-image {
+        aspect-ratio: 2 / 1;
+    }
+}

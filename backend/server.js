@@ -72,7 +72,38 @@ app.post("/send-email", upload.single("resume"), (req, res) => {
     });
   });
   
+// Get job details by ID
+app.get("/job/:id", (req, res) => {
+  const jobId = req.params.id;
+  console.log("Request for job with ID:", jobId);
+  const query = `SELECT * FROM postedjobs WHERE id = ?`;
 
+  db.query(query, [jobId], (err, result) => {
+      if (err) {
+          console.error("Error querying the database:", err);
+          return res.status(500).json({ error: 'Database error' });
+      }
+      if (result.length === 0) {
+          console.log("Job not found");
+          return res.status(404).json({ message: 'Job not found' });
+      }
+      console.log("Job data:", result);
+      return res.json(result);
+  });
+});
+
+// Get all jobs for recommendations
+app.get("/jobs", (req, res) => {
+  const query = `SELECT id, job_title, company_name, company_type FROM postedjobs`;
+
+  db.query(query, (err, results) => {
+      if (err) {
+          console.error("Error querying the database:", err);
+          return res.status(500).json({ error: "Database error" });
+      }
+      return res.json(results);
+  });
+});
 
 
 // Test Route
