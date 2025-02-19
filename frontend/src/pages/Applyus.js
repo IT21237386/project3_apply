@@ -33,7 +33,8 @@ function ApplyPage() {
     formDataToSend.append("resume", formData.resume);
   
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("http://localhost:5000/apply-job", {
+        //http://localhost:5000/send-email to sending mail. use this API
         method: "POST",
         body: formDataToSend,
       });
@@ -49,6 +50,8 @@ function ApplyPage() {
     }
   };
 
+
+  
 
 //   const handleSubmit = (e) => {
 //     e.preventDefault();

@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { handleFormSubmission } = require("./controllers/apiController");
+const { handleFormSubmission ,handleApplyJob } = require("./controllers/apiController");
 const upload = require("./controllers/FileUpload");
 const db = require("./utils/db");
 
@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // API endpoint to handle form submission
 app.post("/send-email", upload.single("resume"), handleFormSubmission);
+
+// API endpoint to handle job application form submission
+app.post("/apply-job", upload.single("resume"), handleApplyJob);
 
 // Test Route
 app.get("/", (req, res) => {
