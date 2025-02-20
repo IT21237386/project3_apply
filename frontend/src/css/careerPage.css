@@ -30,6 +30,7 @@ body {
     height: auto;
     object-fit: cover;
     opacity: 0.8;
+    box-shadow: 0px 12px 8px rgba(0, 0, 0, 0.5);
 }
 
 .karw-career-title {
@@ -64,7 +65,7 @@ body {
     height: auto;
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 12px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Job filter section */
@@ -89,8 +90,15 @@ body {
     border-radius: 14px;
     width: 256px;
     height: 282px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 6px 6px 10px rgb(148, 148, 148);
     border: 1px solid #000;
+}
+
+.karw-filter-card input[type="checkbox"],
+.karw-experience-card input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
 }
 
 /* Recommended jobs section */
@@ -123,14 +131,6 @@ body {
     height: 282px; /* Match height to filter card */
     margin-left: 20px;
     border: 1px solid #000; /* Add border to job cards */
-}
-
-.karw-recommended-job-card:nth-child(odd) {
-    order: 1; /* Place odd cards in the first row */
-}
-
-.karw-recommended-job-card:nth-child(even) {
-    order: 2; /* Place even cards in the second row */
 }
 
 .karw-recommended-job-card-header {
@@ -431,6 +431,100 @@ label {
     font-size: 20px;
 }
 
+/*Job Title Search Box Section*/
+.karw-job-title-filter {
+    margin: 20px 5px;
+    text-align: center;
+}
+
+.karw-job-title-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px 5px;
+}
+
+.karw-job-title-button {
+    margin: 5px;
+    padding: 20px;
+    background-color: #BAE5F8; 
+    color: #000000; 
+    border: 1px solid;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.karw-job-title-button:hover {
+    background-color: #004d40;
+    color: white;
+}
+
+.karw-search-container {
+    display: flex;
+    justify-content: flex-end;
+    justify-content: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.karw-search-input {
+    border: hidden; 
+    width: 400px; 
+    font-size: 16px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-right: 1px solid;
+    text-align: center;
+}
+
+.karw-search-input2 {
+
+    border: hidden; 
+    margin-right: 10px;
+    width: 400px; 
+    font-size: 16px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-left: 1px solid;
+    text-align: center;
+}
+
+.karw-search-input::placeholder {
+    text-align: center;
+    color: #999;
+}
+
+.karw-search-input2::placeholder {
+    text-align: center;
+    color: #999;
+}
+
+.karw-search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    height: 50px;
+}
+
+.karw-search-button {
+    padding: 5px 40px;
+    background-color: rgba(255, 255, 255, 0) ; 
+    color: black; 
+    border: 3px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.karw-search-button:hover {
+    background-color: #004d40; 
+}
+
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
     .karw-career-header {
@@ -571,7 +665,7 @@ label {
     .karw-apply-now-section h2,
     .karw-why-choose-us-section h2,
     .karw-careers-content h2 {
-        font-size: 48px; /* Adjust font size for mobile view */
+        font-size: 40px; /* Adjust font size for mobile view */
     }
 
     .karw-apply-now-section p,
@@ -593,4 +687,38 @@ label {
     .karw-job-count-section {
         display: none; /* Remove job count section in mobile view */
     }
+
+    .karw-search-container {
+        margin: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .karw-search-input,
+    .karw-search-input2 {
+        width: 90%; /* Adjust width to fit within the container */
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .karw-search-button {
+        width: 30%;
+        height: 40px;
+        padding: 0 0;
+        text-size-adjust: 80%;
+    }
+
+    .karw-job-title-filter h2{
+        display: none;
+    }
+
+    .karw-job-title-buttons {
+        text-size-adjust: 70%;
+        padding: 0px
+    }
+
+    .karw-job-title-button {
+        padding: 15px;
+    }
+
 }

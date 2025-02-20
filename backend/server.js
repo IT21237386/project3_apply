@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const multer = require("multer");
 const bodyParser = require("body-parser");
 const path = require("path");
-// const db = require("./utils/db");
+const db = require("./utils/db");
 
 const app = express();
 const PORT = process.env.PORT || 5000; // Use the PORT from .env, fallback to 5000 if undefined

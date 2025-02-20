@@ -12,6 +12,8 @@ import photo3 from '../assets/Rectangle 340 (2).png';
 
 export default function CareerPage() {
     const [recommendedJobs, setRecommendedJobs] = useState([]);
+    const [jobTitle, setJobTitle] = useState('');
+    const [location, setLocation] = useState('');
 
     useEffect(() => {
         // Fetch recommended jobs
@@ -25,6 +27,14 @@ export default function CareerPage() {
 
     const handleJobClick = (id) => {
         window.location.href = `details?id=${id}`;
+    };
+
+    const handleJobFilterClick = (jobTitle) => {
+        console.log(`Filter by job title: ${jobTitle}`);
+    };
+
+    const handleSearch = () => {
+        console.log(`Searching for: ${jobTitle} in ${location}`);
     };
 
     const companyAssets = {
@@ -62,6 +72,39 @@ export default function CareerPage() {
                 </div>
                 <h1 className="karw-career-title">CAREERS</h1>
             </div>
+
+            <div className="karw-job-title-filter">
+                <h2>Job Titles</h2>
+                <div className="karw-job-title-buttons">
+                    {["Software Engineer", "Data Analyst", "IT Support Specialist", "Product Manager", "Business Analyst", "Financial Analyst", "Graphic Designer", "Account Manager"].map((title) => (
+                        <button key={title} onClick={() => handleJobFilterClick(title)} className="karw-job-title-button">
+                            {title}
+                        </button>
+                    ))}
+                </div>
+                
+            </div>
+            
+            <div className="karw-search-container">
+                <div className="karw-search-box">
+                <input
+                    type="text"
+                    placeholder="Job Title"
+                    className="karw-search-input"
+                    value={jobTitle}
+                    onChange={(e) => setJobTitle(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Location"
+                    className="karw-search-input2"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                />
+                </div>
+                <button className="karw-search-button" onClick={handleSearch}>Search</button>
+            </div>
+
             <div className="karw-job-list-title">
                 <h2>Top Job Picks For You</h2>
             </div>
