@@ -437,11 +437,19 @@ label {
     text-align: center;
 }
 
+
+.karw-job-title-box{
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
 .karw-job-title-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     margin-bottom: 20px 5px;
+    width: max-content;
 }
 
 .karw-job-title-button {
@@ -713,7 +721,7 @@ label {
     }
 
     .karw-job-title-buttons {
-        text-size-adjust: 70%;
+        text-size-adjust: 80%;
         padding: 0px
     }
 

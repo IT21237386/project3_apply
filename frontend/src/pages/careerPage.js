@@ -75,12 +75,14 @@ export default function CareerPage() {
 
             <div className="karw-job-title-filter">
                 <h2>Job Titles</h2>
+                <div className="karw-job-title-box">
                 <div className="karw-job-title-buttons">
                     {["Software Engineer", "Data Analyst", "IT Support Specialist", "Product Manager", "Business Analyst", "Financial Analyst", "Graphic Designer", "Account Manager"].map((title) => (
                         <button key={title} onClick={() => handleJobFilterClick(title)} className="karw-job-title-button">
                             {title}
                         </button>
                     ))}
+                </div>
                 </div>
                 
             </div>
