@@ -9,6 +9,7 @@ import careersImage from '../assets/smiley-man-work-holding-laptop-posing.png';
 import photo1 from '../assets/Rectangle 340.png';
 import photo2 from '../assets/Rectangle 340 (1).png';
 import photo3 from '../assets/Rectangle 340 (2).png';
+import goUpImg from '../assets/Double Up.png'; // Import the Go Up image
 
 export default function CareerPage() {
     const [recommendedJobs, setRecommendedJobs] = useState([]);
@@ -35,6 +36,10 @@ export default function CareerPage() {
 
     const handleSearch = () => {
         console.log(`Searching for: ${jobTitle} in ${location}`);
+    };
+
+    const handleGoUpClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const companyAssets = {
@@ -234,6 +239,10 @@ export default function CareerPage() {
             </div>
 
             <Footer />
+
+            <button className="karw-go-up-button" onClick={handleGoUpClick}>
+                <img src={goUpImg} alt="Go Up" className="karw-go-up-icon" />
+            </button>
         </>
     );
 }

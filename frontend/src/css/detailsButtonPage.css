@@ -427,6 +427,7 @@ body {
 @media (max-width: 768px) {
     .karw-details-button-image-section {
         margin-bottom: 100px;
+        border-radius: 0 0 30px 30px;
     }
 
     .karw-job-layout {
@@ -528,13 +529,13 @@ body {
     }
 
     .karw-go-up-button {
-        width: 35px;
-        height: 35px;
+        width: 35px !important; 
+        height: 35px !important;
     }
 
     .karw-go-up-icon {
-        width: 24px;
-        height: 24px;
+        width: 24px !important;
+        height: 24px !important;
     }
 
     .karw-banner-image {
