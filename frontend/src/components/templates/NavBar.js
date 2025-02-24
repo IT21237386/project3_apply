@@ -26,7 +26,7 @@ export default function Navbar() {
                     <li><a href="#">Testimonial</a></li>
                     <li><a href="#">Our Journey</a></li>
                     <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/About">About Us</a></li>
                     <li><a href="/apply">apply</a></li>
                 </ul>
 
